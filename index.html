@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemula Dev.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">Alfin
+        <span>Dev.</span></a>
+
+        <img id="menu-icon" onclick="myFunction()" style="background-color:aqua; border-radius: 5px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAGZJREFUSEvtlrENACAMw8pnnMZpfAYTC1W3CDOEA2JhUpUW0GkQNwx+Zt6qj+ohdp7yKtVLDE6c78DiC+c4t/o46WLX8877rlzYOGGqxU/scYryB4KVCwNja9GtlhvwWpQrrQIx1Rt3TwofeC3yFwAAAABJRU5ErkJggg=="/>
+      
+        <nav id="navBar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skill">Skill</a>
+            <a href="#contact">Contact</a>           
+        </nav>
+        
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="Profil.jpeg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Saya, <span>Alfin</span></h1>
+            <h3 class="text-animation">
+                Saya Seorang <span></span>
+            </h3>
+            <p>Motifasi saya adalah ingin menjadi fullstack developer, mendapat ilmu yang bermanfaat dan memperbanyak relasi.</p>
+            <div class="social-icons">
+                <a style="background-color:aqua;" onclick="redirInstagram()" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAwZJREFUSEvllknojlEUxn9/YxmKIvOQDFFmNmQIO0RSlIzFws4QJWRIFGKjLMxKWRgybSgZisyJSCxkSiky7Qzn0Xn1dt37vu9n81dufb313XvPc89znjPUUU+rrp5w+eeBOwA9gYYlDH0DngJvypgs8rg9sBWYCLQuMxTsvwfOAitSj0gBC+yoATd3g1+Au4A8KlpNgCFAUz/0GZgBnAsvxYCbAc8AebzfvruB2xVAM9uNgFHAev++BnqZ91/z4DFgXVjrHs+skWIdn22gsnsIuAiM9UesKwN+CXRyj9/WCCxQAWrN9/DcA14BnYuARa8U+dg87psA1aOmACOAH8A14ITfmwMc9HsLPFSfgBZAW+BdZjOkWsJQPK96fELsRWZkG9Ay2PgILAH2AfOc6geWETddLz2A/oD++7VCYInisqfCpMD4MgcVyE7gDtAYGOCg8krg2suv+w4qhsROFHgCcN6pm5a7PdhfL6qGeszyxrv6Q8SEWHuY21SMBzqDYrIQ+JjRMj13eYOl0xpgKbAjEfuVwBZgtTGxKXdGzOjho4ErKeDxwIWIx6cBUa+fKlJsiSE9OHy0NCMWlFaXUsDaVO6dMZFNzlk/6UqWmk/VCCyBDTPtjHPbUaozYBkXSLZUUFRYlpuityeAVznF+m7Onbnluhjjwi0EDj3u4rmtsjcoIq5uXixULvsEjaGSuEZ6DiuOYTottiKwy7xW4VfKyBM1BSlWaaQav9Aq1J6AESm8n2ljuN+Jeiz1SYWpAiLDojpWQKT4vZEwqOGogOiByukosOrpC6uzz4HuiViqZE61fBc7apPXrYgcT/TdBt6V1CYVLvWBKLAmjA9eWztWmSQSj8v+lpqlaoWnVb61xtqi6FKBPwLMKjFctq3yqzKsvi6bv1cMuA3wxMcdTQ4bgRvWo7+Xofh+NgjonsKhMah3vjPpXGr0mWsxPpAD+tvRRybUKg+Hjy4a9lRbpVRVMImkliV2VAuUAaL7j1Vlrm5XMBSkHvMIKJxeqgDX4mnls/8f8E/8tqAfEQrEDwAAAABJRU5ErkJggg=="/></a>
+                <a style="background-color:aqua;" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAfpJREFUSEvt1kuoT1EUx/HPjYEkz0J5RUlKDDDxyiOSMhDJQJEyUEhRBmJgQCkJkamJt4wkE4WBxESGTChJmUh5F2fVvv/uPd1z9/73v/lP7q7dGey1f9+91l57rdOjS6OnS1zD4P8W+aEI9ThcxjLMwA+cw2l8S55MSd9PvZ7VwaNxBXvwp8D9aXiK2QPYfsB1LMBYLO9rUwdvrQzv4B62F8DvY1PmgG+wMUXjcZPHB3AhLT7Hzmq+bRBeghcFUXlXRXEqtuBBE3gVWqfCT5zARXyvQQ7ifAH4c3Lg4WChHoWvGFkTjCS5i2vVyV/hI47jZAH4THXoo3W7gbJ6X8rSwTS/IObMAvAxnMqBd2NhlVyLsLZAtMQkNK/mwBvQ7y5KlDM28b6f5cBxt5HFs4YAGBJxHRPwNweO9ZXpHU8aAvhN7BhIp6lkRkU6jL0Y08EBVteeZ0uqCbwf27C4A/BLLG06dBN4Pl5jRAfersOjdsFhvxk3EI2j3XEWRwbblGuLkxFhX4MVhfQnWI9fnYCjnUWSHUqtLceOCO3KQUOkr8cTU8WKZj4vzahe8Q5zI95rlMZLOcPe9XqoI5Ojrs4tFPiNWykqrb+Lkr1NdxyeRoOPP4vpmIPx1X1Hi4v5PhWZ26k6lbD62eSSq23B0g3D4NJIdWzXtVD/A1e4TB/sCCruAAAAAElFTkSuQmCC"/></a>
+                <a style="background-color:aqua;" href="mailto:alfinihsan027@gmail.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAcpJREFUSEvt1s+LTlEcx/HXyI8lJQvJj39Amo1kY8POj9KUFAs2UtOkbPxYIMRCEQs7JVNSUn7szGJ2lIWFLGVSspAFm2kQzlfn6rh55j7zuD3P5rmrc8/9ns/7ez/ne36MGNAzMiCuIbhvztetPoIT2NByBjM4j1uVbgnehumWgXW5zXgRnSX4FC7myHMtJ3Am653E5Tr4LKqAg5hsCX4Ad4ofCs5ff1yC49tNHMPXHhNYims4WowPJxvBEf8Su/B+gfA1eIzR2rhGcNgcFsXzCfvxtEv4DtzFyhxfav0THPP724Y8BRO4kgpuCX7k+Y/i+9khgSjU02lsiC9K7W84nhK4UYzpChz6W/AIqzJsCmP4XIMvx31sz/0fsBfP83uVbKPV5TJbjQc5idB5h514lUU34knaHNbl94DtxsciuZ7AMX4xrmI8i82lBA7nduxGy3L7erb3e82RnsGVzj7cLkBV/ywO4V6H+f9vcOhuSsvkIdZnyJu07Pbg9TxV3wo49FcgbI1qj+r/0rDUWgN3uaT/hA3BfT8W4+i9VG2N1UT04yKwFc/q4HiPIywO67ULrZ6G+LdpE7rQ6erTMmt+ueG9um92D8zqXxs3ZB/GykYiAAAAAElFTkSuQmCC"/></a>
+                <a style="background-color:aqua;" onclick="redirWhatsapp()" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAxxJREFUSEvlllnITlEUhp8/U5nnzEMyRchYZiFTbpAklNkNFyhKSS4QSkIZL4TIEEmIkjkpkaIk8zzPMoX9am2dduf8+3xXf7Juvu+cs9d61/CutXYRJSRFJYTLPwdcE2gIlAYeAM+AX4Vkr5CIWwKTgPFA3QDkA3AOOOgc2gJ8izmRB7g+sBiYCH9L8xm4Y1G2DUAeA1OBw8WBx4CHAduBqsBzYC1wCLicMFrRgXQFegLzgPLm0ExgXRZ4ccCDgSOmuBxYCHyNpLCRpXqAnZvhyrIhTScLuDFwFagMzAZWxWoWfJ8LrHDO/gT6AGdD/SxgRaqIlwALTKks0B04lZPBO4ExFkD7PMBK03HgIdDMGKq6nQdkQKxW3WMiXly3DhgF7EsqpEW8HpgOzALW2GH9X23/FXHfGKp9H2LsFiGHx4DvASKJevWpHfbOeN16zrknOcGVuVpAdeCT1wkjLgd8AW4ArRKG5wAr7Vm1G5sTVMcuuO7o5oZLx2QbhsAag/dtCqkvvTQwZ1TracCmAoD3AiON3aezIlaKlepLblB0DoxrOCxztX9t7FZW8ohndw8j6B+dMOIKwEfgrSNTtRSr3vs3FrmeJWJ6KWBrSquJjL2BJhZUKrBe3nYGmhqwHEiKBoraqk2i3opIDqjP7xoX/KgsA7y0szWAH1mp1nvP4Ck2/sLAq1ibKco02eP6d7R98GN3mwtoQvJwWh9rSFyxtDR3k+t7BoCMDjSG17Ez2lr9gIv2rN8u9u5kDFjfz9i2GeSIdCzCIPVnOztz063ER/Z/PrDU1feEs9c/tJE1q1UXjTwRTEu+UNE+3mjjVv17LQ+wT7U2Si9TUJvpehNbi7oKaaksMr1xwI40r9Mi9ivtgGuTW65eQ4HWNiLFVpHvVWCskrt7TXatKF3dWNSSinpXVqrSgP1KTOooVbpzKSJd6l64PtYV550dEoE01ST7zQG1ZaaEwOq792Zcq1FRH7VoNejVEiOATo44muteVIbdwGbbv1FOhMC1HVgHt/ZE/eJuitJrASjF/nobBUseiF32CjJWyOH/D/g3btWaH4iaddwAAAAASUVORK5CYII="/></a>
+            </div>
+
+            <a href="#" class="btn">Hire Me</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3 class="text-animation">
+                <span></span>
+            </h3>
+            <p>Saya adalah Mahasiswa Politeknik Elektronika Negeri Surabaya PENS Prodi Teknologi Rekayasa Internet, saya tinggal di Lamongan, Karangbinangun, RT02/RW02. Untuk menjadi fullstack developer, Saya selalu berusaha untuk terus belajar dan mengikuti perkembangan terbaru dalam dunia teknologi, karena saya percaya bahwa pembelajaran yang berkelanjutan adalah kunci utama menuju kesuksesan. </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="about-img">
+            <img src="Profil.jpeg" alt="">
+        </div>
+    </section>
+
+    <section class="skill" id="skill">
+        <h2 class="heading">Skill</h2>
+
+        <div class="skill-container">
+            
+            <div class="skill-box">
+                <div class="skill-info">
+                    <h4>UI/UX Design</h4>
+                    <p>Saya adalah desainer UI/UX yang memiliki keahlian dalam desain estetis, penelitian pengguna, dan kolaborasi tim.</p>
+                </div>
+            </div>
+        
+
+        <div class="skill-box">
+            <div class="skill-info">
+                <h4>Frontend Developer</h4>
+                <p>Saya adalah pengembang frontend developer yang ahli dalam bahasa pemrograman HTML, CSS, dan JavaScript. Memiliki kemampuan dalam menciptakan antarmuka pengguna interaktif dan responsif untuk aplikasi web modern.</p>
+            </div>
+        </div>
+
+        <div class="skill-box">
+            <div class="skill-info">
+                <h4>Photo Grapher</h4>
+                <p>Saya adalah seorang fotografer yang memiliki kemampuan untuk menangkap momen-momen indah dan menceritakan kisah melalui gambar.</p>
+        </div>
+    </div>
+        
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Phone Number">
+                <input type="text" placeholder="Subject">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Massage"></textarea>
+            </div>
+
+            
+            <input type="submit" value="Send Massage" class="btn">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="social">
+            <a style="background-color:aqua;" onclick="redirInstagram()" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAwZJREFUSEvllknojlEUxn9/YxmKIvOQDFFmNmQIO0RSlIzFws4QJWRIFGKjLMxKWRgybSgZisyJSCxkSiky7Qzn0Xn1dt37vu9n81dufb313XvPc89znjPUUU+rrp5w+eeBOwA9gYYlDH0DngJvypgs8rg9sBWYCLQuMxTsvwfOAitSj0gBC+yoATd3g1+Au4A8KlpNgCFAUz/0GZgBnAsvxYCbAc8AebzfvruB2xVAM9uNgFHAev++BnqZ91/z4DFgXVjrHs+skWIdn22gsnsIuAiM9UesKwN+CXRyj9/WCCxQAWrN9/DcA14BnYuARa8U+dg87psA1aOmACOAH8A14ITfmwMc9HsLPFSfgBZAW+BdZjOkWsJQPK96fELsRWZkG9Ay2PgILAH2AfOc6geWETddLz2A/oD++7VCYInisqfCpMD4MgcVyE7gDtAYGOCg8krg2suv+w4qhsROFHgCcN6pm5a7PdhfL6qGeszyxrv6Q8SEWHuY21SMBzqDYrIQ+JjRMj13eYOl0xpgKbAjEfuVwBZgtTGxKXdGzOjho4ErKeDxwIWIx6cBUa+fKlJsiSE9OHy0NCMWlFaXUsDaVO6dMZFNzlk/6UqWmk/VCCyBDTPtjHPbUaozYBkXSLZUUFRYlpuityeAVznF+m7Onbnluhjjwi0EDj3u4rmtsjcoIq5uXixULvsEjaGSuEZ6DiuOYTottiKwy7xW4VfKyBM1BSlWaaQav9Aq1J6AESm8n2ljuN+Jeiz1SYWpAiLDojpWQKT4vZEwqOGogOiByukosOrpC6uzz4HuiViqZE61fBc7apPXrYgcT/TdBt6V1CYVLvWBKLAmjA9eWztWmSQSj8v+lpqlaoWnVb61xtqi6FKBPwLMKjFctq3yqzKsvi6bv1cMuA3wxMcdTQ4bgRvWo7+Xofh+NgjonsKhMah3vjPpXGr0mWsxPpAD+tvRRybUKg+Hjy4a9lRbpVRVMImkliV2VAuUAaL7j1Vlrm5XMBSkHvMIKJxeqgDX4mnls/8f8E/8tqAfEQrEDwAAAABJRU5ErkJggg=="/></a>
+            <a style="background-color:aqua;" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAfpJREFUSEvt1kuoT1EUx/HPjYEkz0J5RUlKDDDxyiOSMhDJQJEyUEhRBmJgQCkJkamJt4wkE4WBxESGTChJmUh5F2fVvv/uPd1z9/73v/lP7q7dGey1f9+91l57rdOjS6OnS1zD4P8W+aEI9ThcxjLMwA+cw2l8S55MSd9PvZ7VwaNxBXvwp8D9aXiK2QPYfsB1LMBYLO9rUwdvrQzv4B62F8DvY1PmgG+wMUXjcZPHB3AhLT7Hzmq+bRBeghcFUXlXRXEqtuBBE3gVWqfCT5zARXyvQQ7ifAH4c3Lg4WChHoWvGFkTjCS5i2vVyV/hI47jZAH4THXoo3W7gbJ6X8rSwTS/IObMAvAxnMqBd2NhlVyLsLZAtMQkNK/mwBvQ7y5KlDM28b6f5cBxt5HFs4YAGBJxHRPwNweO9ZXpHU8aAvhN7BhIp6lkRkU6jL0Y08EBVteeZ0uqCbwf27C4A/BLLG06dBN4Pl5jRAfersOjdsFhvxk3EI2j3XEWRwbblGuLkxFhX4MVhfQnWI9fnYCjnUWSHUqtLceOCO3KQUOkr8cTU8WKZj4vzahe8Q5zI95rlMZLOcPe9XqoI5Ojrs4tFPiNWykqrb+Lkr1NdxyeRoOPP4vpmIPx1X1Hi4v5PhWZ26k6lbD62eSSq23B0g3D4NJIdWzXtVD/A1e4TB/sCCruAAAAAElFTkSuQmCC"/></a>
+            <a style="background-color:aqua;" href="mailto:alfinihsan027@gmail.com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAcpJREFUSEvt1s+LTlEcx/HXyI8lJQvJj39Amo1kY8POj9KUFAs2UtOkbPxYIMRCEQs7JVNSUn7szGJ2lIWFLGVSspAFm2kQzlfn6rh55j7zuD3P5rmrc8/9ns/7ez/ne36MGNAzMiCuIbhvztetPoIT2NByBjM4j1uVbgnehumWgXW5zXgRnSX4FC7myHMtJ3Am653E5Tr4LKqAg5hsCX4Ad4ofCs5ff1yC49tNHMPXHhNYims4WowPJxvBEf8Su/B+gfA1eIzR2rhGcNgcFsXzCfvxtEv4DtzFyhxfav0THPP724Y8BRO4kgpuCX7k+Y/i+9khgSjU02lsiC9K7W84nhK4UYzpChz6W/AIqzJsCmP4XIMvx31sz/0fsBfP83uVbKPV5TJbjQc5idB5h514lUU34knaHNbl94DtxsciuZ7AMX4xrmI8i82lBA7nduxGy3L7erb3e82RnsGVzj7cLkBV/ywO4V6H+f9vcOhuSsvkIdZnyJu07Pbg9TxV3wo49FcgbI1qj+r/0rDUWgN3uaT/hA3BfT8W4+i9VG2N1UT04yKwFc/q4HiPIywO67ULrZ6G+LdpE7rQ6erTMmt+ueG9um92D8zqXxs3ZB/GykYiAAAAAElFTkSuQmCC"/></a>
+            <a style="background-color:aqua;" onclick="redirWhatsapp()" href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAxxJREFUSEvlllnITlEUhp8/U5nnzEMyRchYZiFTbpAklNkNFyhKSS4QSkIZL4TIEEmIkjkpkaIk8zzPMoX9am2dduf8+3xXf7Juvu+cs9d61/CutXYRJSRFJYTLPwdcE2gIlAYeAM+AX4Vkr5CIWwKTgPFA3QDkA3AOOOgc2gJ8izmRB7g+sBiYCH9L8xm4Y1G2DUAeA1OBw8WBx4CHAduBqsBzYC1wCLicMFrRgXQFegLzgPLm0ExgXRZ4ccCDgSOmuBxYCHyNpLCRpXqAnZvhyrIhTScLuDFwFagMzAZWxWoWfJ8LrHDO/gT6AGdD/SxgRaqIlwALTKks0B04lZPBO4ExFkD7PMBK03HgIdDMGKq6nQdkQKxW3WMiXly3DhgF7EsqpEW8HpgOzALW2GH9X23/FXHfGKp9H2LsFiGHx4DvASKJevWpHfbOeN16zrknOcGVuVpAdeCT1wkjLgd8AW4ArRKG5wAr7Vm1G5sTVMcuuO7o5oZLx2QbhsAag/dtCqkvvTQwZ1TracCmAoD3AiON3aezIlaKlepLblB0DoxrOCxztX9t7FZW8ohndw8j6B+dMOIKwEfgrSNTtRSr3vs3FrmeJWJ6KWBrSquJjL2BJhZUKrBe3nYGmhqwHEiKBoraqk2i3opIDqjP7xoX/KgsA7y0szWAH1mp1nvP4Ck2/sLAq1ibKco02eP6d7R98GN3mwtoQvJwWh9rSFyxtDR3k+t7BoCMDjSG17Ez2lr9gIv2rN8u9u5kDFjfz9i2GeSIdCzCIPVnOztz063ER/Z/PrDU1feEs9c/tJE1q1UXjTwRTEu+UNE+3mjjVv17LQ+wT7U2Si9TUJvpehNbi7oKaaksMr1xwI40r9Mi9ivtgGuTW65eQ4HWNiLFVpHvVWCskrt7TXatKF3dWNSSinpXVqrSgP1KTOooVbpzKSJd6l64PtYV550dEoE01ST7zQG1ZaaEwOq792Zcq1FRH7VoNejVEiOATo44muteVIbdwGbbv1FOhMC1HVgHt/ZE/eJuitJrASjF/nobBUseiF32CjJWyOH/D/g3btWaH4iaddwAAAAASUVORK5CYII="/></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="#contact">FAQ</a>
+            </li>
+            <li>
+                <a href="#skill">Skill</a>
+            </li>
+            <li>
+                <a href="#about">About Me</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            2024 AlfinCan Dev
+        </p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
